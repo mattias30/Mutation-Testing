@@ -107,6 +107,34 @@ public class MinimumBinaryHeapTest {
 
 	}
 
+	@Test
+	public void extractMinHeapStructureLeaf_04() {
+
+		heap.add(1);
+		heap.add(2);
+		heap.add(3);
+		heap.add(4);
+		heap.add(5);
+
+		heap.exractMin();
+		assertEquals(5, heap.getArray().get(3));
+
+	}
+
+	@Test
+	public void removeHeapStructureLeaf_05() {
+
+		heap.add(1);
+		heap.add(2);
+		heap.add(3);
+		heap.add(4);
+		heap.add(5);
+
+		heap.remove(1);
+		assertEquals(5, heap.getArray().get(3));
+
+	}
+
 
 }
 
