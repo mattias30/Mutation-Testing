@@ -12,6 +12,7 @@ public class MinimumBinaryHeap {
 	 * 
 	 * @param array
 	 *
+	 *
 	 */
 	public void minHeapify(List<Integer> array) {
 		heap = new ArrayList<>(array);
