@@ -10,7 +10,8 @@ public class MinimumBinaryHeap {
 	/**
 	 * Switches elements in the array such that heap property holds for every element.
 	 * 
-	 * @param array 
+	 * @param array
+	 *
 	 */
 	public void minHeapify(List<Integer> array) {
 		heap = new ArrayList<>(array);
