@@ -135,6 +135,18 @@ public class MinimumBinaryHeapTest {
 
 	}
 
+	@Test
+	public void bubbleDownLeftChildSmaller_06() {
+
+		heap.add(1);
+		heap.add(2);
+		heap.add(3);
+		heap.add(4);
+
+		heap.remove(1);
+		assertEquals(2, heap.exractMin());
+
+	}
 
 }
 
