@@ -94,7 +94,7 @@ public class MinimumBinaryHeapTest {
 	}
 
 	@Test
-	public void bubbleDownLeftChildSmaller_03() {
+	public void extractMinHeapStructure_03() {
 
 		heap.add(1);
 		heap.add(2);
@@ -102,7 +102,9 @@ public class MinimumBinaryHeapTest {
 		heap.add(4);
 		heap.add(5);
 
-		//TODO
+		heap.exractMin();
+		assertEquals(2, heap.exractMin());
+
 	}
 
 
