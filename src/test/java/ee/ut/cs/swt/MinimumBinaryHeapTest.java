@@ -82,9 +82,29 @@ public class MinimumBinaryHeapTest {
 	}
 
 	@Test
-	public void removeLastElement_01() { //last element
+	public void removeLastElement_01() {
 		heap.minHeapify(result);
 		assertEquals(false, heap.remove(12));
 	}
+
+	@Test
+	public void isNotEmpty_02() {
+		heap.minHeapify(result);
+		assertEquals(false, heap.isEmpty());
+	}
+
+	@Test
+	public void bubbleDownLeftChildSmaller_03() {
+
+		heap.add(1);
+		heap.add(2);
+		heap.add(3);
+		heap.add(4);
+		heap.add(5);
+
+		//TODO
+	}
+
+
 }
 
