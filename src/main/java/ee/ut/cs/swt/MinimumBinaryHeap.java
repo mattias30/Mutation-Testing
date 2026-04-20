@@ -29,6 +29,9 @@ public class MinimumBinaryHeap {
 	 * @return Element at the top of the heap.
 	 */
 	public int exractMin() {
+		if (heap.isEmpty()) {
+			throw new IllegalArgumentException("Heap is empty");
+		}
 		int min = heap.get(0);
 		int leaf = heap.get(heap.size()-1);
 		heap.set(0, leaf);
@@ -95,6 +98,9 @@ public class MinimumBinaryHeap {
 	 */
 	public boolean remove(int element) {
 		int index = heap.indexOf(element);
+		if (index == -1) {
+			return false;
+		}
 		if (index == heap.size()-1) {
 			heap.remove(heap.size()-1);
 			return true;

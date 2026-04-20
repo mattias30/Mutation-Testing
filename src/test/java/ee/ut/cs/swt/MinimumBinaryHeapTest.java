@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MinimumBinaryHeapTest {
 	
@@ -107,6 +107,17 @@ public class MinimumBinaryHeapTest {
 		heap.remove(4);
 		assertEquals(12, heap.getArray().get(3)); // last element
 
+	}
+
+	@Test
+	public void removeNonExistingElement_05() {
+		heap.minHeapify(result);
+        assertFalse(heap.remove(999));
+	}
+
+	@Test
+	public void extractMinOnEmptyHeap_06() {
+		assertThrows(IllegalArgumentException.class, () -> heap.exractMin());
 	}
 }
 
