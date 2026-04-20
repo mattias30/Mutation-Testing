@@ -119,5 +119,14 @@ public class MinimumBinaryHeapTest {
 	public void extractMinOnEmptyHeap_06() {
 		assertThrows(IllegalArgumentException.class, () -> heap.exractMin());
 	}
-}
 
+	@Test
+	public void bubbleDownLeftChildSmaller_07() {
+		heap.add(1);
+		heap.add(3); // left child
+		heap.add(100); // right child
+		heap.add(10);
+		heap.remove(1);
+		assertEquals(3, heap.exractMin());
+	}
+}
