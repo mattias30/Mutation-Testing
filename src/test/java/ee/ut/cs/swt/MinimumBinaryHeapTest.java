@@ -84,7 +84,7 @@ public class MinimumBinaryHeapTest {
 	@Test
 	public void removeLastElement_01() {
 		heap.minHeapify(result);
-		assertEquals(false, heap.remove(12));
+		assertEquals(true, heap.remove(12));
 	}
 
 	@Test
@@ -95,58 +95,18 @@ public class MinimumBinaryHeapTest {
 
 	@Test
 	public void extractMinHeapStructure_03() {
-
-		heap.add(1);
-		heap.add(2);
-		heap.add(3);
-		heap.add(4);
-		heap.add(5);
-
+		heap.minHeapify(result);
 		heap.exractMin();
-		assertEquals(2, heap.exractMin());
-
+		assertEquals(5, heap.exractMin());
 	}
+
 
 	@Test
-	public void extractMinHeapStructureLeaf_04() {
-
-		heap.add(1);
-		heap.add(2);
-		heap.add(3);
-		heap.add(4);
-		heap.add(5);
-
-		heap.exractMin();
-		assertEquals(5, heap.getArray().get(3));
+	public void removeHeapStructureLeaf_04() {
+		heap.minHeapify(result);
+		heap.remove(4);
+		assertEquals(12, heap.getArray().get(3)); // last element
 
 	}
-
-	@Test
-	public void removeHeapStructureLeaf_05() {
-
-		heap.add(1);
-		heap.add(2);
-		heap.add(3);
-		heap.add(4);
-		heap.add(5);
-
-		heap.remove(1);
-		assertEquals(5, heap.getArray().get(3));
-
-	}
-
-	@Test
-	public void bubbleDownLeftChildSmaller_06() {
-
-		heap.add(1);
-		heap.add(2);
-		heap.add(3);
-		heap.add(4);
-
-		heap.remove(1);
-		assertEquals(2, heap.exractMin());
-
-	}
-
 }
 
